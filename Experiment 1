@@ -1,0 +1,99 @@
+# EXP 1: TYPES OF OPERATORS IN PYTHON
+
+# 1️⃣ Arithmetic Operators
+print("---- Arithmetic Operators ----")
+x = 10
+y = 20
+
+print("Addition:", x + y)
+print("Subtraction:", x - y)
+print("Multiplication:", x * y)
+print("Division:", x / y)
+print("Modulus:", x % y)
+print("Floor Division:", x // y)
+print("Exponent:", x ** y)
+
+
+# 2️⃣ Comparison Operators
+print("\n---- Comparison Operators ----")
+x = 20
+y = 25
+
+print("Equal:", x == y)
+print("Not Equal:", x != y)
+print("Greater Than:", x > y)
+print("Less Than:", x < y)
+print("Greater Than or Equal:", x >= y)
+print("Less Than or Equal:", x <= y)
+
+
+# 3️⃣ Logical Operators
+print("\n---- Logical Operators ----")
+a = 10
+b = 20
+
+print("AND:", a > 5 and b > 15)
+print("OR:", a > 5 or b < 10)
+print("NOT:", not(a > 5))
+
+
+# 4️⃣ Bitwise Operators
+print("\n---- Bitwise Operators ----")
+a = 10
+b = 4
+
+print("Bitwise AND:", a & b)
+print("Bitwise OR:", a | b)
+print("Bitwise XOR:", a ^ b)
+print("Bitwise NOT:", ~a)
+print("Left Shift:", a << 2)
+print("Right Shift:", a >> 2)
+
+
+# 5️⃣ Membership Operators
+print("\n---- Membership Operators ----")
+a = 10
+b = 7
+lst = [1,2,3,4,5,6,7,8,9,10]
+
+if a in lst:
+    print("a is present in the list")
+else:
+    print("a is not present in the list")
+
+if b in lst:
+    print("b is present in the list")
+else:
+    print("b is not present in the list")
+
+
+x = 23
+y = 20
+lst2 = [10,15,20,30,35,40,45,50]
+
+if x not in lst2:
+    print("x is not available in the list")
+else:
+    print("x is available in the list")
+
+if y not in lst2:
+    print("y is not available in the list")
+else:
+    print("y is available in the list")
+
+
+# 6️⃣ Identity Operators
+print("\n---- Identity Operators ----")
+x = 6
+
+if type(x) is int:
+    print("x is of type int")
+else:
+    print("x is not of type int")
+
+x = 4.5
+
+if type(x) is not int:
+    print("x is not of type int")
+else:
+    print("x is of type int")
