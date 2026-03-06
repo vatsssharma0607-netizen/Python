@@ -1,0 +1,96 @@
+# =========================================================
+# SECTION 1: LIST FUNDAMENTALS & CREATION
+# =========================================================
+
+# Lists are ordered, mutable, and can hold mixed types
+a = [1, 2, 3, 4, 5]            # List of integers
+b = ['apple', 'banana', 'cherry'] # List of strings
+c = [1, 'hello', 3.14, True]   # Mixed data types
+
+# Creating lists from iterables or repeated elements
+from_tuple = list((1, 2, 3, 'apple', 4.5))
+from_string = list("MIT")                 
+zeros = [0] * 7                           
+
+# =========================================================
+# SECTION 2: ADDING, UPDATING & REMOVING
+# =========================================================
+
+nums = []
+nums.append(10)             # Adds to the end
+nums.insert(0, 5)           # Adds 5 at index 0
+nums.extend([15, 20, 25])   # Merges multiple elements
+
+# Updating (Lists are mutable)
+nums[1] = 25                # Changes element at index 1
+
+# Removing elements
+nums.remove(25)             # Removes first occurrence of 25
+popped = nums.pop(1)        # Removes and returns element at index 1
+del nums[0]                 # Deletes element at index 0
+nums.clear()                # Removes all items
+
+# =========================================================
+# SECTION 3: SLICING & INDEXING
+# =========================================================
+
+# list[start : end : step]
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+print(data[1:4])    # Indices 1 to 3
+print(data[::2])    # Every second element
+print(data[::-1])   # Reverses the list
+print(data[-2:])    # Last two elements
+
+# =========================================================
+# SECTION 4: ADVANCED STRUCTURES (Nested & Comprehension)
+# =========================================================
+
+# Nested Lists (Matrix)
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[1][2]) # Access Row 1, Column 2 (value 6)
+
+# List Comprehension
+squares = [x**2 for x in range(1, 6)]
+
+# =========================================================
+# SECTION 5: TUPLES & UNPACKING
+# =========================================================
+
+# Tuples are immutable
+t1 = (1, 2, 3, 4, 5)
+single_val = (10,)  # Single element tuple requires a comma
+
+# Unpacking
+fruit_list = ['apple', 'banana', 'cherry']
+f1, f2, f3 = fruit_list
+
+# Extended Unpacking
+a, b, *remaining = (1, 2, 3, 4, 5, 6, 7)
+
+# =========================================================
+# SECTION 6: PRACTICAL ALGORITHMS
+# =========================================================
+
+# Manual Max/Min Search
+numbers = [15, 3, 8, 22, 5, 13]
+max_val = numbers[0]
+min_val = numbers[0]
+
+for n in numbers:
+    if n > max_val:
+        max_val = n
+    if n < min_val:
+        min_val = n
+
+print(f"Max: {max_val}, Min: {min_val}")
+
+# Converting Tuple to List to modify it
+my_tuple = (1, 2, 3)
+temp_list = list(my_tuple)
+temp_list[1] = 12
+my_tuple = tuple(temp_list)
