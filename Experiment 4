@@ -1,0 +1,83 @@
+# =========================================================
+# SECTION 1: LIST FUNDAMENTALS & CREATION
+# =========================================================
+
+# Lists are ordered, mutable, and store mixed data types
+a = [1, 2, 3, 4, 5]            # List of integers
+b = ['apple', 'banana', 'cherry'] # List of strings
+c = [1, 'hello', 3.14, True]   # Mixed data types
+
+# Creating lists from iterables (tuples/strings) using list()
+a_from_tuple = list((1, 2, 3, 'apple', 4.5))
+b_from_string = list("MIT")                 
+
+# Creating lists with repeated elements
+zeros = [0] * 7
+
+# =========================================================
+# SECTION 2: ADDING, UPDATING & REMOVING
+# =========================================================
+
+nums = []
+nums.append(10)             # Adds 10 to the end
+nums.insert(0, 5)           # Inserts 5 at index 0
+nums.extend([15, 20, 25])   # Appends multiple elements
+
+# Updating elements (demonstrating mutability)
+nums[1] = 25                # Changes the element at index 1
+
+# Removing elements
+nums.remove(25)             # Removes the first occurrence of 25
+popped_val = nums.pop(1)    # Removes and returns item at index 1
+del nums[0]                 # Deletes element at index 0
+
+# =========================================================
+# SECTION 3: SLICING & INDEXING
+# =========================================================
+
+# Slicing syntax: list[start : end : step]
+data = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Get elements from index 1 to 4 (exclusive)
+print(data[1:4]) 
+
+# Get every second element from the beginning
+print(data[::2]) 
+
+# Negative indexing and reversing
+print(data[-2:])   # Last two elements
+print(data[::-1])  # Reverses the entire list
+
+# =========================================================
+# SECTION 4: NESTED LISTS & COMPREHENSION
+# =========================================================
+
+# Nested lists representing a matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+print(matrix[1])    # Accesses the second row
+print(matrix[1][2]) # Accesses specific element (row 1, column 2)
+
+# List comprehension: concise way to create lists
+squares = [x**2 for x in range(1, 6)]
+
+# =========================================================
+# SECTION 5: UNPACKING & CONVERSION
+# =========================================================
+
+# Unpacking a list into variables
+fruits = ['apple', 'banana', 'cherry']
+f1, f2, f3 = fruits
+
+# Extended unpacking with an asterisk
+t1 = (1, 2, 3, 4, 5, 6, 7)
+a, b, *c = t1 # c becomes a list of the remaining values
+
+# Converting tuple to list to allow modification
+t2 = (1, 2, 3)
+t2_list = list(t2)
+t2_list[1] = 12
+t2 = tuple(t2_list)
