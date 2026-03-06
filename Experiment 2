@@ -1,0 +1,70 @@
+# --- 1. Basic List Creation and Properties ---
+# Lists can hold different types and allow duplicates
+a = [1, 2, 3, 4, 5]            # List of integers
+b = ['apple', 'banana', 'cherry'] # List of strings
+c = [1, 'hello', 3.14, True]   # Mixed data types
+
+print("List a:", a)
+print("List b:", b)
+print("List c:", c)
+
+# --- 2. Indexing and Accessing ---
+# Python uses 0-based indexing
+a = [10, 20, "GfG", 40, True]
+print("Index 0:", a[0])
+print("Index 1:", a[1])
+print("Index 2:", a[2])
+
+# --- 3. Creating Lists from Iterables ---
+a = list((1, 2, 3, 'apple', 4.5)) # From a tuple
+print("From tuple:", a)
+
+b = list("MIT")                  # From a string
+print("From string:", b)
+
+# Creating lists with repeated elements
+a = [2] * 5
+b = [0] * 7
+print("Repeated [2]:", a)
+print("Repeated [0]:", b)
+
+# --- 4. Modifying Lists (Adding/Removing) ---
+a = []
+a.append(10)                # Adds to the end
+a.insert(0, 5)              # Inserts 5 at index 0
+a.extend([15, 20, 25])      # Appends multiple elements
+print("After additions:", a)
+
+# Removing elements
+a.remove(30) if 30 in a else None # Removes first occurrence of 30
+popped_val = a.pop(1)             # Removes and returns item at index 1
+print("Popped value:", popped_val)
+del a[0]                          # Deletes item at index 0
+print("After deletions:", a)
+
+# --- 5. Advanced List Operations ---
+# Nested Lists (Matrices)
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print("Second row:", matrix[1])
+print("Specific element (Row 1, Col 2):", matrix[1][2])
+
+# List Comprehension
+squares = [x**2 for x in range(1, 6)]
+print("Squares:", squares)
+
+# --- 6. Slicing Syntax: list[start : end : step] ---
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Slice 1 to 4:", a[1:4])
+print("Every 2nd element:", a[::2])
+print("Reverse list:", a[::-1])
+print("Negative slice (last 2):", a[-2:])
+
+# --- 7. Unpacking ---
+my_list = ['apple', 'banana', 'cherry']
+f1, f2, f3 = my_list
+print(f"Unpacked: f1: {f1}, f2: {f2}, f3: {f3}")
+
+# Unpacking with asterisk (Extended Unpacking)
+t1 = (1, 2, 3, 4, 5, 6, 7)
+a, b, *c = t1
+print(f"Unpacked: a={a}, b={b}, remaining={c}")
