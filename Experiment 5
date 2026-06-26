@@ -1,0 +1,54 @@
+[1]
+my_tuple = ("Apple", "Banana", "Cherry", "Date")
+print("Original Tuple:",{my_tuple})
+first_item = my_tuple[0]
+last_item = my_tuple[-1]
+print("First item:",{first_item})
+print("Last item:",{last_item})
+temp_list = list(my_tuple)        
+temp_list[1] = "Blueberry"        
+my_tuple = tuple(temp_list)       
+print("Updated Tuple:",{my_tuple})
+temp_list = list(my_tuple)
+temp_list.pop(0)                  
+my_tuple = tuple(temp_list)
+print("Tuple after removing one item:",{my_tuple})
+del my_tuple
+print("Tuple successfully deleted from memory.")
+
+
+
+[2]
+mytuple = (10, 20, 30, 20, 40, 50, 30, 60, 20, 70, 80)
+seen = []
+repeated = []
+for item in mytuple:
+    if item in seen and item not in repeated:
+        repeated.append(item)
+    else:
+        seen.append(item)
+print("Original Tuple:",mytuple)
+print("Repeated Items:",repeated)
+
+
+
+[3]
+mytuple = (42, 17, 89, 2, 55, 10, 104)
+minval = mytuple[0]
+maxval = mytuple[0]
+for num in mytuple:
+    if num < minval:
+        minval = num
+    if num > maxval:
+        maxval = num
+print("The tuple is:",{mytuple})
+print("The minimum number is:",{minval})
+print("The maximum number is:",{maxval})
+
+
+#mytuple = (42, 17, 89, 2, 55, 10, 104)
+#minval = min(mytuple)
+#maxval = max(mytuple)
+#print("The tuple is:",{mytuple})
+#print("The minimum number is:",{minval})
+#print("The maximum number is:",{maxval})
