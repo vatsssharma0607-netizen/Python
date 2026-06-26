@@ -1,4 +1,4 @@
-[1]
+# 1
 my_tuple = ("Apple", "Banana", "Cherry", "Date")
 print("Original Tuple:",{my_tuple})
 first_item = my_tuple[0]
@@ -18,7 +18,7 @@ print("Tuple successfully deleted from memory.")
 
 
 
-[2]
+# 2
 mytuple = (10, 20, 30, 20, 40, 50, 30, 60, 20, 70, 80)
 seen = []
 repeated = []
@@ -32,7 +32,7 @@ print("Repeated Items:",repeated)
 
 
 
-[3]
+# 3
 mytuple = (42, 17, 89, 2, 55, 10, 104)
 minval = mytuple[0]
 maxval = mytuple[0]
